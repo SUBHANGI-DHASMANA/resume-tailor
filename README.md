@@ -38,7 +38,7 @@ resume-tailor/
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/resume-tailor.git
+   git clone https://github.com/SUBHANGI-DHASMANA/resume-tailor.git
    cd resume-tailor
    ```
 
