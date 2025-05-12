@@ -27,13 +27,13 @@ export default function Results() {
   useEffect(() => {
     // Get the analysis result from localStorage
     const storedResult = localStorage.getItem("analysisResult");
-    
+
     if (!storedResult) {
       // If no result is found, redirect back to the home page
       router.push("/");
       return;
     }
-    
+
     try {
       const parsedResult = JSON.parse(storedResult);
       setResult(parsedResult);
@@ -62,7 +62,7 @@ export default function Results() {
         <div className="text-center">
           <h1 className="text-2xl font-bold text-red-600 dark:text-red-400 mb-4">No Results Found</h1>
           <p className="text-gray-600 dark:text-gray-300 mb-6">
-            We couldn't find any analysis results. Please try again.
+            We couldn&apos;t find any analysis results. Please try again.
           </p>
           <Link
             href="/"
@@ -122,7 +122,7 @@ export default function Results() {
                 {skillsScore}%
               </div>
             </div>
-            
+
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <h3 className="text-lg font-semibold text-green-600 dark:text-green-400 mb-2">
@@ -142,7 +142,7 @@ export default function Results() {
                   </p>
                 )}
               </div>
-              
+
               <div>
                 <h3 className="text-lg font-semibold text-red-600 dark:text-red-400 mb-2">
                   Missing Skills
@@ -174,7 +174,7 @@ export default function Results() {
                 {keywordScore}%
               </div>
             </div>
-            
+
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <h3 className="text-lg font-semibold text-green-600 dark:text-green-400 mb-2">
@@ -197,7 +197,7 @@ export default function Results() {
                   </p>
                 )}
               </div>
-              
+
               <div>
                 <h3 className="text-lg font-semibold text-red-600 dark:text-red-400 mb-2">
                   Missing Keywords
@@ -227,7 +227,7 @@ export default function Results() {
             <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4">
               Improvement Suggestions
             </h2>
-            
+
             {result.improvement_suggestions.length > 0 ? (
               <ul className="space-y-3">
                 {result.improvement_suggestions.map((suggestion, index) => (

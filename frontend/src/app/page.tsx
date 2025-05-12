@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
 
 export default function Home() {
   const router = useRouter();
@@ -43,7 +42,7 @@ export default function Home() {
       formData.append("resume", resumeFile);
       formData.append("jobDescription", jobDescription);
 
-      const response = await fetch("http://localhost:5001/api/analyze", {
+      const response = await fetch("http://localhost:5002/api/analyze", {
         method: "POST",
         body: formData,
       });
